@@ -6,7 +6,7 @@ export default function Home() {
     <div className="bg-gradient-to-r from-gray-600 to-gray-900">
       <div className={styles.container}>
         <Head>
-          <title>My Book</title>
+          <title>అ స మ ర్థు డు</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <nav>
@@ -54,12 +54,12 @@ export default function Home() {
         <main className={styles.main}>
           <div className="flex flex-col justify-center items-center max-w-sm mx-auto my-8">
            
-            <div className="bg-gray-300 h-64 w-96 md:w-64 rounded-lg shadow-md bg-cover bg-center">
+            <div className="bg-gray-600 h-64 w-96 md:w-64 rounded-lg shadow-md bg-cover bg-center">
             <img src="/book.png"/>
             </div>
             
-            <div className="w-96 md:w-64 bg-white -mt-5 shadow-lg rounded-lg overflow-hidden">
-              <div className="py-2 text-center font-bold uppercase tracking-wide text-gray-800">
+            <div className="w-96 md:w-64 bg-gray-600 -mt-5 shadow-lg rounded-lg overflow-hidden">
+              <div className="py-2 text-center font-bold uppercase tracking-wide text-white">
                 అ స మ ర్థు డు
               </div>
               <div className="flex items-center justify-between py-2 px-3 bg-gray-400">
