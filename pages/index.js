@@ -1,109 +1,73 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Nav from "./nav";
+import Footer from "./footer";
+import HTMLFlipBook from "react-pageflip";
+import React from "react";
+
+const pageList = [
+  "/SamplePages/BookCover.jpg",
+  "/SamplePages/page-1.jpg",
+  "/SamplePages/page-2.jpg",
+  "/SamplePages/page-4a.jpg",
+  "/SamplePages/page-5.jpg",
+  "/SamplePages/page-6.jpg",
+  "/SamplePages/page-8.jpg",
+  "/SamplePages/page-10.jpg",
+  "/SamplePages/page-3.jpg",
+  "/SamplePages/page-4b.jpg",
+  "/SamplePages/page-5a.jpg",
+  "/SamplePages/page-7b.jpg",
+  "/SamplePages/page-9a.jpg",
+  "/SamplePages/lastpage.jpg",
+];
 
 export default function Home() {
+  
   return (
-    <div className="bg-gradient-to-r from-gray-600 to-gray-900">
-      <div className={styles.container}>
-        <Head>
-          <title>అ స మ ర్థు డు</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <nav>
-          <div className="container mx-auto px-6 py-2 flex justify-between items-center">
-            <a
-              className="font-bold text-2xl lg:text-4xl text-left text-white"
-              href="#"
-            >
-              అ స మ ర్థు డు
-            </a>
-            <div className="block lg:hidden text-white">
-              <button className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
-                <svg
-                  className="fill-current h-3 w-3"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Menu</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-              </button>
-            </div>
-           {/*  <div className="hidden lg:block text-white">
-              <ul className="inline-flex">
-                <li>
-                  <a className="px-4 font-bold" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="px-4 hover:text-gray-800" href="#">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="px-4 hover:text-gray-800" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-          </div>
-        </nav>
-
-        <main className={styles.main}>
-          <div className="flex flex-col justify-center items-center max-w-sm mx-auto my-8">
-           
-            <div className="bg-gray-600 h-64 w-96 md:w-64 rounded-lg shadow-md bg-cover bg-center">
-            <img src="/book.png"/>
-            </div>
-            
-            <div className="w-96 md:w-64 bg-gray-600 -mt-5 shadow-lg rounded-lg overflow-hidden">
-              <div className="py-2 text-center font-bold uppercase tracking-wide text-white">
-                అ స మ ర్థు డు
-              </div>
-              <div className="flex items-center justify-between py-2 px-3 bg-gray-400">
-                <h1 className="text-gray-800 font-bold ">₹ 300</h1>
-                <form>
-                  <script
-                    src="https://checkout.razorpay.com/v1/payment-button.js"
-                    data-payment_button_id="pl_Ge6aoEF7spuW7B"
-                    async
-                  >
-                    {" "}
-                  </script>{" "}
-                </form>
-                {/* <button className=" bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700">Buy Now</button> */}
-              </div>
-            </div>
-
-          </div>
-          {/* <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1> */}
-
-          {/*   <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-              
-        </div> */}
-        </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://rajeshkumarsheela.surge.sh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white"
+    <div className="bg-gray-900">
+      <Nav />
+      <div className="ml-16 mt-8">
+        <div className="content-center justify-center items-center align-middle">
+          <HTMLFlipBook
+            width={600}
+            height={600}
+            // showCover="true"
+            flippingTime="2000"
           >
-            Powered by{" "}
-            <img src="https://www.jamiesale-cartoonist.com/wp-content/uploads/cartoon-business-man-free1.png" alt="Vercel Logo" className={styles.logo} />
-          </a>
-        </footer>
+          <Page number="1" fileName="/SamplePages/BookCover.jpg"></Page>
+          <Page number="2" fileName="/SamplePages/page-1.jpg"></Page>
+          <Page number="3" fileName="/SamplePages/page-2.jpg"></Page>
+          <Page number="4" fileName="/SamplePages/page-3.jpg"></Page>
+          <Page number="5" fileName="/SamplePages/page-4a.jpg"></Page>
+          <Page number="6" fileName="/SamplePages/page-4b.jpg"></Page>
+          <Page number="7" fileName="/SamplePages/page-5.jpg"></Page>
+          <Page number="8" fileName="/SamplePages/page-5a.jpg"></Page>
+          <Page number="9" fileName="/SamplePages/page-6.jpg"></Page>
+          <Page number="10" fileName="/SamplePages/page-7b.jpg"></Page>
+          <Page number="11" fileName="/SamplePages/page-8.jpg"></Page>
+          <Page number="2" fileName="/SamplePages/page-9a.jpg"></Page>
+          <Page number="1" fileName="/SamplePages/lastpage.jpg"></Page>
+          </HTMLFlipBook>
+        </div>
+        <div className="relative -top-20 left-3 z-auto" >
+          <div className="shadow-lg rounded-lg bg-gray-600 w-72">
+            <div className="flex items-center justify-between py-2 px-3">
+              <h1 className="text-white font-bold">₹ 198 </h1>
+              <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_H5SaT7FbMFdDdH" async> </script> </form>
+            </div>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
+
+const Page = React.forwardRef((props, ref) => {
+  return (
+    <div ref={ref}>
+    <img src={props.fileName} />
+    </div>
+  );
+});
+

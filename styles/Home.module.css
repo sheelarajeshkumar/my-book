@@ -13,9 +13,6 @@
 }
 .main {
   padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -123,4 +120,13 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.flipDiv{
+  width: 100%;
+}
+
+.flipImage {
+  width: 40%;
+  float: left;
 }
