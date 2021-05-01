@@ -15,7 +15,7 @@ export default function Nav() {
             >
               {/* అ స మ ర్థు డు */}
             </a>
-            <div className="block lg:hidden text-white">
+            <div className="hidden text-white">
               <button className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
                 <svg
                   className="fill-current h-3 w-3"

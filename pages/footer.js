@@ -9,7 +9,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="text-white"
         >
-          Powered by{" "}
+          Developed by{" Rajesh Kumar Sheela"}
           <img src="https://www.jamiesale-cartoonist.com/wp-content/uploads/cartoon-business-man-free1.png" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
